@@ -1,0 +1,76 @@
+[debug] [2023-05-06T17:12:16.685Z] ----------------------------------------------------------------------
+[debug] [2023-05-06T17:12:16.686Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\adane\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2023-05-06T17:12:16.687Z] CLI Version:   11.25.3
+[debug] [2023-05-06T17:12:16.687Z] Platform:      win32
+[debug] [2023-05-06T17:12:16.687Z] Node Version:  v18.16.0
+[debug] [2023-05-06T17:12:16.688Z] Time:          Sat May 06 2023 12:12:16 GMT-0500 (Central Daylight Time)
+[debug] [2023-05-06T17:12:16.688Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-06T17:12:16.690Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-05-06T17:12:16.769Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-06T17:12:16.769Z] > authorizing via signed-in user (adanewdaba@gmail.com)
+[debug] [2023-05-06T17:12:16.769Z] [iam] checking project oct-269d5 for permissions ["firebase.projects.get"]
+[debug] [2023-05-06T17:12:16.770Z] > refreshing access token with scopes: []
+[debug] [2023-05-06T17:12:16.771Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-06T17:12:16.771Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-06T17:12:16.945Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-06T17:12:16.946Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-05-06T17:12:16.986Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-06T17:12:16.986Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-06T17:12:16.992Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/oct-269d5:testIamPermissions [none]
+[debug] [2023-05-06T17:12:16.992Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/oct-269d5:testIamPermissions x-goog-quota-user=projects/oct-269d5
+[debug] [2023-05-06T17:12:16.992Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oct-269d5:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-06T17:12:17.243Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/oct-269d5:testIamPermissions 200
+[debug] [2023-05-06T17:12:17.243Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oct-269d5:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-06T17:12:17.246Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-05-06T17:12:17.249Z] defaultcredentials: writing to file C:\Users\adane\AppData\Roaming\firebase\adanewdaba_gmail_com_application_default_credentials.json
+[debug] [2023-05-06T17:12:17.250Z] DEBUG: Setting GAC to C:\Users\adane\AppData\Roaming\firebase\adanewdaba_gmail_com_application_default_credentials.json
+[debug] [2023-05-06T17:12:17.250Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oct-269d5/adminSdkConfig [none]
+[debug] [2023-05-06T17:12:17.547Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oct-269d5/adminSdkConfig 200
+[debug] [2023-05-06T17:12:17.547Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oct-269d5/adminSdkConfig {"projectId":"oct-269d5","storageBucket":"oct-269d5.appspot.com"}
+[debug] [2023-05-06T17:12:17.556Z] [functions] Watching "C:\Users\adane\Desktop\Evangadi\Phase3\17. AmazonClone\amazon-project\functions" for Cloud Functions...
+[debug] [2023-05-06T17:12:17.560Z] Validating nodejs source
+[debug] [2023-05-06T17:12:18.934Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0",
+    "stripe": "^12.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-06T17:12:18.935Z] Building nodejs source
+[debug] [2023-05-06T17:12:18.935Z] Failed to find version of module node: reached end of search path C:\Users\adane\Desktop\Evangadi\Phase3\17. AmazonClone\amazon-project\functions\node_modules
+[warn] !  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2023-05-06T17:12:18.937Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-06T17:12:18.942Z] Found firebase-functions binary at 'C:\Users\adane\Desktop\Evangadi\Phase3\17. AmazonClone\amazon-project\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-06T17:12:19.231Z] Serving at port 8287
+
+[debug] [2023-05-06T17:12:19.725Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-06T17:12:19.730Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-05-06T17:12:19.741Z] [functions] Loaded functions definitions from source: api.
+[debug] [2023-05-06T17:12:19.742Z] [functions[us-central1-api]] http function initialized (http://127.0.0.1:5000/oct-269d5/us-central1/api).
+[info] i  functions: Loaded functions: api 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
